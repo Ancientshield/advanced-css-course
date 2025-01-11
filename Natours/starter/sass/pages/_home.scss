@@ -26,3 +26,14 @@
 	padding: 25rem 0 15rem 0;
 	margin-top: -10rem;
 }
+
+section-stories {
+	padding: 15rem 0;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba($color-secondary-light, 0.8),
+			rgba($color-secondary-dark, 0.8)
+		),
+		url(../img/nat-10.jpg);
+	background-size: cover;
+}
