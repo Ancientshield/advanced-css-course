@@ -5,12 +5,16 @@
 	color: $color-grey-light-1;
 
 	@include respond(tab-port) {
-		padding: 0rem 0;
+		padding: 8rem 0;
 	}
 
 	&__logo-box {
 		text-align: center;
 		margin-bottom: 8rem;
+
+		@include respond(tab-port) {
+			margin-bottom: 6rem;
+		}
 	}
 
 	&__logo {
@@ -23,7 +27,7 @@
 		padding-top: 2rem;
 		display: inline-block;
 
-		@include respond(tab-land) {
+		@include respond(tab-port) {
 			width: 100%;
 			text-align: center;
 		}
@@ -67,7 +71,7 @@
 		width: 80%;
 		float: right;
 
-		@include respond(tab-land) {
+		@include respond(tab-port) {
 			width: 100%;
 			float: none;
 		}
