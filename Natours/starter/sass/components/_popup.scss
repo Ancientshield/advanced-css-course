@@ -10,6 +10,13 @@
 	visibility: hidden;
 	transition: all 0.3s;
 
+	@supports (-webkit-backdrop-filter: blur(10px)) or
+		(backdrop-filter: blur(10px)) {
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		background-color: rgba($color-black, 0.3);
+	}
+
 	&__content {
 		@include absCenter;
 
@@ -30,7 +37,7 @@
 	}
 
 	&__right {
-		width: 66.666667%;
+		width: 66.6666667%;
 		display: table-cell;
 		vertical-align: middle;
 		padding: 3rem 5rem;
@@ -45,9 +52,13 @@
 		font-size: 1.4rem;
 		margin-bottom: 4rem;
 
+		-moz-column-count: 2;
+		-moz-column-gap: 4rem; //1em = 14px;
+		-moz-column-rule: 1px solid $color-grey-light-2;
+
 		column-count: 2;
-		column-gap: 4rem;
-		column-rule: 1px solid rgba($color-black, 0.2);
+		column-gap: 4rem; //1em = 14px;
+		column-rule: 1px solid $color-grey-light-2;
 
 		-moz-hyphens: auto;
 		-ms-hyphens: auto;
@@ -55,7 +66,7 @@
 		hyphens: auto;
 	}
 
-	// 讓 popup 被選中時顯示
+	//Open states
 	&:target {
 		opacity: 1;
 		visibility: visible;
